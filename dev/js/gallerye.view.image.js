@@ -8,10 +8,6 @@ ips.controller.mixin('galleryEnlargement', 'gallery.front.view.image', true, fun
      */
     this._setUpSizingDesktop = function (forceResize) {
         // Set or override default values
-        //this._sizeBuffer    = ips.getSetting('gallerye_sizeBuffer');
-        var minHeight       = ips.getSetting('gallerye_minHeight');
-        var subtractNav     = ips.getSetting('gallerye_navHeight');
-        var subtractScope   = ips.getSetting('gallerye_scope');
         var basePercent     = ips.getSetting('gallerye_percentage');
 
         var isLightbox = this.scope.is('[data-role="lightbox"]');
@@ -98,85 +94,4 @@ ips.controller.mixin('galleryEnlargement', 'gallery.front.view.image', true, fun
         }
     };
 
-    /**
-     * Overrides the setUpSizing method to alter the sizing of the gallery image box
-     *
-     * @param 	{event}		e 	Event object
-     * @returns {void}
-     */
-    // this._setUpSizing = function() {
-    //     // Set or override default values
-    //     this._sizeBuffer    = ips.getSetting('gallerye_sizeBuffer');
-    //     var minHeight       = ips.getSetting('gallerye_minHeight');
-    //     var subtractNav     = ips.getSetting('gallerye_navHeight');
-    //     var subtractScope   = ips.getSetting('gallerye_scope');
-    //     var basePercent     = ips.getSetting('gallerye_percentage');
-    //     Debug.log('Base image height: ' + basePercent + '%');
-    //     Debug.log('Custom size buffer: ' + this._sizeBuffer);
-    //     Debug.log('Custom minimum height: ' + minHeight);
-    //     Debug.log('Subtracting navigation menu height?: ' + (subtractNav ? 'Yes' : 'No'));
-    //     Debug.log('Subtracting image scope height?: ' + (subtractScope ? 'Yes' : 'No'));
-    //
-    //     var frame = this.scope.find('[data-role="imageFrame"]');
-    //     var viewportHeight = $( window ).height();
-    //     var scopeTop = ips.utils.position.getElemPosition( this.scope );
-    //     var navHeight = this.scope.find('[data-role="collectionNav"]').outerHeight();
-    //     var imageData = frame.attr('data-imageSizes');
-    //     var ratio = 1;
-    //
-    //     // Calculate our custom max height now
-    //     var maxHeight = viewportHeight * (basePercent / 100);
-    //     maxHeight = maxHeight - this._sizeBuffer;
-    //     if (subtractScope) {
-    //         maxHeight = maxHeight - scopeTop.absPos.top;
-    //     }
-    //     if (subtractNav) {
-    //         maxHeight = maxHeight - navHeight;
-    //     }
-    //
-    //     if( maxHeight < minHeight ){
-    //         maxHeight = minHeight;
-    //     }
-    //
-    //     frame.css({
-    //         height: maxHeight + 'px'
-    //     });
-    //
-    //     if( imageData ){
-    //         imageData = $.parseJSON( imageData );
-    //         ratio = imageData['large'][ 0 ] / imageData['large'][ 1 ];
-    //
-    //         var innerHeight = frame.innerHeight() - parseInt( frame.css('padding-top') ) - parseInt( frame.css('padding-bottom') );
-    //         var innerWidth = frame.innerWidth() - parseInt( frame.css('padding-left') ) - parseInt( frame.css('padding-right') );
-    //         var marginTop = 0;
-    //         var imageSize = {
-    //             width: imageData['large'][0],
-    //             height: imageData['large'][1]
-    //         };
-    //
-    //         if( imageSize['width'] > innerWidth ){
-    //             imageSize['width'] = innerWidth;
-    //             imageSize['height'] = Math.round( imageSize['width'] / ratio );
-    //         }
-    //
-    //         if( imageSize['height'] > innerHeight ){
-    //             imageSize['height'] = innerHeight;
-    //             imageSize['width'] = Math.round( imageSize['height'] * ratio );
-    //         }
-    //
-    //         var padding = parseInt( frame.css('paddingTop') ) + parseInt( frame.css('paddingBottom') );
-    //         var marginTop = ( maxHeight - padding - imageSize['height'] ) / 2;
-    //
-    //         this.scope
-    //             .find('[data-role="notesWrapper"], [data-role="theImage"]').css({
-    //             width: imageSize['width'] + 'px',
-    //             height: imageSize['height'] + 'px',
-    //         })
-    //             .show()
-    //             .filter('[data-role="notesWrapper"]')
-    //             .css({
-    //                 marginTop: ( marginTop > 0 ) ? marginTop : 0 + 'px'
-    //             });
-    //     }
-    // };
 });
