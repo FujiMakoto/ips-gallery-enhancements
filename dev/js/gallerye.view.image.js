@@ -1,4 +1,11 @@
 ips.controller.mixin('galleryEnlargement', 'gallery.front.view.image', true, function() {
+
+    /**
+     * Handles sizing elements as required
+     *
+     * @param 	{boolean}	forceResize 	Images smaller than previous won't shrink lightbox; setting this to true overrides that behavior
+     * @returns {void}
+     */
     this._setUpSizingDesktop = function(forceResize) {
         var basePercent = ips.getSetting('genh_percentage');
         var isLightbox = this.scope.is('[data-role="lightbox"]');
@@ -46,6 +53,7 @@ ips.controller.mixin('galleryEnlargement', 'gallery.front.view.image', true, fun
             }).show();
         }
     };
+
     this._setUpSizingMobile = function(forceResize) {
         var basePercent = ips.getSetting('genh_percentage');
         var isLightbox = this.scope.is('[data-role="lightbox"]');
