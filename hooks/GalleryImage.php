@@ -66,7 +66,15 @@ class hook1650 extends _HOOK_CLASS_
 	public function set__dimensions( $dimensions )
 	{
 	    $file = \IPS\File::get('gallery_Image', $this->original_file_name);
-	    $origDims = $file->getImageDimensions();
+
+        try
+        {
+            $origDims = $file->getImageDimensions();
+        }
+        catch ( \DomainException $e )
+        {
+            return parent::set__dimensions( $dimensions );
+        }
 
 	    $dimensions['orig'][0] = $origDims[0];
 	    $dimensions['orig'][1] = $origDims[1];
