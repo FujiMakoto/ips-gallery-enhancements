@@ -22,7 +22,7 @@ The gallery lightbox is neat. It's nice to have in certain areas of the site, li
 
 It is not, however, nice to have literally everywhere you go in the gallery. It does not replace traditional gallery navigation for me, and based on the vast amount of user feedback I've seen, most members I've ineteracted with do not like this system either.
 
-This is ancedotal, but shares my personal experience.
+This is anecdotal, but shares my personal experience.
 
 This plugin will let you disable having the lighbox open when you click on images in category and album overview pages. You will instead be directed to the normal image overview page.
 
