@@ -17,8 +17,8 @@ class hook1651 extends _HOOK_CLASS_
 	 */
 	protected function _category( $category )
 	{
-	    \IPS\Output::i()->jsVars['gallerye_noLightbox'] = \IPS\Settings::i()->gallerye_noLightbox_category;
-		return parent::_category( $category );
+        \IPS\Output::i()->jsVars['genh_noLightbox'] = \IPS\Settings::i()->genh_noLightbox_category;
+        return parent::_category( $category );
 	}
 
 	/**
@@ -29,8 +29,8 @@ class hook1651 extends _HOOK_CLASS_
 	 */
 	protected function _album( $album )
 	{
-      	\IPS\Output::i()->jsVars['gallerye_noLightbox'] = \IPS\Settings::i()->gallerye_noLightbox_album;
-		return parent::_album( $album );
+        \IPS\Output::i()->jsVars['genh_noLightbox'] = \IPS\Settings::i()->genh_noLightbox_album;
+        return parent::_album( $album );
 	}
 
 }

@@ -34,7 +34,15 @@ class hook1650 extends _HOOK_CLASS_
         if ( empty($data['orig']) )
         {
             $file = \IPS\File::get('gallery_Image', $this->original_file_name);
-            $origDims = $file->getImageDimensions();
+
+            try
+            {
+                $origDims = $file->getImageDimensions();
+            }
+            catch ( \DomainException $e )
+            {
+                return json_encode($data);
+            }
 
             $data['orig'][0] = $origDims[0];
             $data['orig'][1] = $origDims[1];

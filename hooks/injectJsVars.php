@@ -20,11 +20,11 @@ class hook1652 extends _HOOK_CLASS_
 	 */
 	protected function manage()
 	{
-        \IPS\Output::i()->jsVars['gallerye_navHeight']  = (bool)\IPS\Settings::i()->gallerye_navHeight;
-        \IPS\Output::i()->jsVars['gallerye_scope']      = (bool)\IPS\Settings::i()->gallerye_scope;
-        \IPS\Output::i()->jsVars['gallerye_sizeBuffer'] = (int)\IPS\Settings::i()->gallerye_sizeBuffer;
-        \IPS\Output::i()->jsVars['gallerye_minHeight']  = (int)\IPS\Settings::i()->gallerye_minHeight;
-        \IPS\Output::i()->jsVars['gallerye_percentage'] = (int)\IPS\Settings::i()->gallerye_percentage;
+        \IPS\Output::i()->jsVars['genh_navHeight']  = (bool)\IPS\Settings::i()->genh_navHeight;
+        \IPS\Output::i()->jsVars['genh_scope']      = (bool)\IPS\Settings::i()->genh_scope;
+        \IPS\Output::i()->jsVars['genh_sizeBuffer'] = (int)\IPS\Settings::i()->genh_sizeBuffer;
+        \IPS\Output::i()->jsVars['genh_minHeight']  = (int)\IPS\Settings::i()->genh_minHeight;
+        \IPS\Output::i()->jsVars['genh_percentage'] = (int)\IPS\Settings::i()->genh_percentage;
 		return call_user_func_array( 'parent::manage', func_get_args() );
 	}
   
