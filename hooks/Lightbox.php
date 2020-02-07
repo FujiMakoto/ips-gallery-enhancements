@@ -6,7 +6,7 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
 	exit;
 }
 
-class hook417 extends _HOOK_CLASS_
+class hook1653 extends _HOOK_CLASS_
 {
 
 /* !Hook Data - DO NOT REMOVE */
