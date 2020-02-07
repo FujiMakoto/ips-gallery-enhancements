@@ -20,7 +20,7 @@ Here is a before and after demonstrating this:
 #### 2. Allows you to disable the gallery lightbox.
 The gallery lightbox is neat. It's nice to have in certain areas of the site, like when clicking on a gallery image linked in a forum post.
 
-It is not, however, nice to have literally everywhere you go in the gallery. It does not replace traditional gallery navigation for me, and based on the vast amount of user feedback I've seen, most members I've ineteracted with do not like this system either.
+It is not, however, nice to have literally everywhere you go in the gallery. It does not replace traditional gallery navigation for me, and based on the vast amount of user feedback I've seen, most members I've interacted with do not like this system either.
 
 This is anecdotal, but shares my personal experience.
 
@@ -35,3 +35,7 @@ Why is the lightbox being forced here? It's redundant and not any more user frie
 This I consider more of a bug. The "view full image" link does not, as its name implies, open the full image. It opens the large, scaled down image in a new tab instead.
 
 This plugin fixes it so that it links to the original image instead.
+
+#### 5. Adds a download button to the lightbox
+
+After bashing the lightbox overuse so much, I decided to wrap up by adding something to it. This includes a simple tweak that adds a "download image" button to the lightbox.
