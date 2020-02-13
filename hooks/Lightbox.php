@@ -3,13 +3,13 @@
 /* To prevent PHP errors (extending class does not exist) revealing path */
 if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
 {
-	exit;
+    exit;
 }
 
-class hook1653 extends _HOOK_CLASS_
+class hook57 extends _HOOK_CLASS_
 {
 
-/* !Hook Data - DO NOT REMOVE */
+    /* !Hook Data - DO NOT REMOVE */
     public static function hookData() {
         return array_merge_recursive( array (
             'imageLightboxFrame' =>
@@ -60,12 +60,12 @@ class hook1653 extends _HOOK_CLASS_
                         array (
                             'selector' => '#elImageLightboxActions_menu',
                             'type' => 'add_after',
-                            'content' => '<a href="{$image->url(\'download\')}" class="ipsButton ipsButton_small ipsButton_narrow ipsSpacer_top ipsSpacer_half ipsPos_right ipsButton_primary" style="margin-right: 5px;" data-ipsTooltip title="{lang="download"}"> <i class="fa fa-download"></i> </a>',
+                            'content' => '<a href="{$image->url(\'download\')}" class="ipsButton ipsButton_small ipsButton_narrow ipsSpacer_top ipsSpacer_half ipsPos_right ipsButton_primary" style="margin-right: 5px;" data-ipsTooltip title="{lang="download"}"> <i class="fa fa-download"></i> </a>',
                         ),
                 ),
         ), parent::hookData() );
     }
-/* End Hook Data */
+    /* End Hook Data */
 
 
 }

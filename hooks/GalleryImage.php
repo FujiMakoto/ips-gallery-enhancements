@@ -3,12 +3,11 @@
 /* To prevent PHP errors (extending class does not exist) revealing path */
 if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
 {
-	exit;
+    exit;
 }
 
-class hook1650 extends _HOOK_CLASS_
+class hook54 extends _HOOK_CLASS_
 {
-
 
     /**
      * Get any image dimensions stored
@@ -33,7 +32,7 @@ class hook1650 extends _HOOK_CLASS_
         // Don't know the original dimensions yet? Find out now.
         if ( empty($data['orig']) )
         {
-            $file = \IPS\File::get('gallery_Image', $this->original_file_name);
+            $file = \IPS\File::get('gallery_Images', $this->original_file_name);
 
             try
             {
@@ -57,15 +56,15 @@ class hook1650 extends _HOOK_CLASS_
         return json_encode($data);
     }
 
-	/**
-	 * Set any image dimensions
-	 *
-	 * @param	array	$dimensions	Image dimensions to store
-	 * @return	array
-	 */
-	public function set__dimensions( $dimensions )
-	{
-	    $file = \IPS\File::get('gallery_Image', $this->original_file_name);
+    /**
+     * Set any image dimensions
+     *
+     * @param	array	$dimensions	Image dimensions to store
+     * @return	array
+     */
+    public function set__dimensions( $dimensions )
+    {
+        $file = \IPS\File::get('gallery_Images', $this->original_file_name);
 
         try
         {
@@ -76,10 +75,10 @@ class hook1650 extends _HOOK_CLASS_
             return parent::set__dimensions( $dimensions );
         }
 
-	    $dimensions['orig'][0] = $origDims[0];
-	    $dimensions['orig'][1] = $origDims[1];
+        $dimensions['orig'][0] = $origDims[0];
+        $dimensions['orig'][1] = $origDims[1];
 
-		return parent::set__dimensions( $dimensions );
-	}
+        return parent::set__dimensions( $dimensions );
+    }
 
 }
