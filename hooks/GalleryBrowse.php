@@ -6,7 +6,7 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
     exit;
 }
 
-class hook55 extends _HOOK_CLASS_
+class hook458 extends _HOOK_CLASS_
 {
 
     /**
@@ -17,9 +17,9 @@ class hook55 extends _HOOK_CLASS_
      */
     protected function _category( $category )
     {
-        \IPS\Output::i()->jsVars['genh_noLightbox'] = \IPS\Settings::i()->genh_noLightbox_category;
-        return parent::_category( $category );
-    }
+		\IPS\Output::i()->jsVars['genh_noLightbox'] = \IPS\Settings::i()->genh_noLightbox_category;
+		return parent::_category( $category );
+	}
 
     /**
      * Show Album
@@ -29,8 +29,8 @@ class hook55 extends _HOOK_CLASS_
      */
     protected function _album( $album )
     {
-        \IPS\Output::i()->jsVars['genh_noLightbox'] = \IPS\Settings::i()->genh_noLightbox_album;
-        return parent::_album( $album );
-    }
+		\IPS\Output::i()->jsVars['genh_noLightbox'] = \IPS\Settings::i()->genh_noLightbox_album;
+		return parent::_album( $album );
+	}
 
 }

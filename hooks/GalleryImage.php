@@ -6,7 +6,7 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
     exit;
 }
 
-class hook54 extends _HOOK_CLASS_
+class hook457 extends _HOOK_CLASS_
 {
 
     /**
@@ -16,7 +16,7 @@ class hook54 extends _HOOK_CLASS_
      */
     public function get__dimensions()
     {
-        return parent::get__dimensions();
+	    return parent::get__dimensions();
     }
 
     /**
@@ -27,33 +27,33 @@ class hook54 extends _HOOK_CLASS_
      */
     public function get_originalData()
     {
-        $data = json_decode($this->_data['data'], true);
+		$data = json_decode($this->_data['data'], true);
 
-        // Don't know the original dimensions yet? Find out now.
-        if ( empty($data['orig']) )
-        {
-            $file = \IPS\File::get('gallery_Images', $this->original_file_name);
+		// Don't know the original dimensions yet? Find out now.
+		if ( empty($data['orig']) )
+		{
+			$file = \IPS\File::get('gallery_Images', $this->original_file_name);
 
-            try
-            {
-                $origDims = $file->getImageDimensions();
-            }
-            catch ( \DomainException $e )
-            {
-                return json_encode($data);
-            }
+			try
+			{
+				$origDims = $file->getImageDimensions();
+			}
+			catch ( \DomainException $e )
+			{
+				return json_encode($data);
+			}
 
-            $data['orig'][0] = $origDims[0];
-            $data['orig'][1] = $origDims[1];
+			$data['orig'][0] = $origDims[0];
+			$data['orig'][1] = $origDims[1];
 
-            $this->data = json_encode($data);
-            $this->save();
-        }
+			$this->data = json_encode($data);
+			$this->save();
+		}
 
-        $data['large'][0] = $data['orig'][0];
-        $data['large'][1] = $data['orig'][1];
+		$data['large'][0] = $data['orig'][0];
+		$data['large'][1] = $data['orig'][1];
 
-        return json_encode($data);
+		return json_encode($data);
     }
 
     /**
@@ -64,21 +64,21 @@ class hook54 extends _HOOK_CLASS_
      */
     public function set__dimensions( $dimensions )
     {
-        $file = \IPS\File::get('gallery_Images', $this->original_file_name);
+		$file = \IPS\File::get('gallery_Images', $this->original_file_name);
 
-        try
-        {
-            $origDims = $file->getImageDimensions();
-        }
-        catch ( \DomainException $e )
-        {
-            return parent::set__dimensions( $dimensions );
-        }
+		try
+		{
+			$origDims = $file->getImageDimensions();
+		}
+		catch ( \DomainException $e )
+		{
+			return parent::set__dimensions( $dimensions );
+		}
 
-        $dimensions['orig'][0] = $origDims[0];
-        $dimensions['orig'][1] = $origDims[1];
+		$dimensions['orig'][0] = $origDims[0];
+		$dimensions['orig'][1] = $origDims[1];
 
-        return parent::set__dimensions( $dimensions );
-    }
+		return parent::set__dimensions( $dimensions );
+	}
 
 }

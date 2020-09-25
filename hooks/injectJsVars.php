@@ -6,7 +6,7 @@ if ( !defined( '\IPS\SUITE_UNIQUE_KEY' ) )
     exit;
 }
 
-class hook56 extends _HOOK_CLASS_
+class hook459 extends _HOOK_CLASS_
 {
 
     /**
@@ -20,12 +20,11 @@ class hook56 extends _HOOK_CLASS_
      */
     protected function manage()
     {
-        \IPS\Output::i()->jsVars['genh_navHeight']  = (bool)\IPS\Settings::i()->genh_navHeight;
-        \IPS\Output::i()->jsVars['genh_scope']      = (bool)\IPS\Settings::i()->genh_scope;
-        \IPS\Output::i()->jsVars['genh_sizeBuffer'] = (int)\IPS\Settings::i()->genh_sizeBuffer;
-        \IPS\Output::i()->jsVars['genh_minHeight']  = (int)\IPS\Settings::i()->genh_minHeight;
-        \IPS\Output::i()->jsVars['genh_percentage'] = (int)\IPS\Settings::i()->genh_percentage;
-        return \call_user_func_array( 'parent::manage', \func_get_args() );
-    }
-
+		\IPS\Output::i()->jsVars['genh_navHeight']  = (bool)\IPS\Settings::i()->genh_navHeight;
+		\IPS\Output::i()->jsVars['genh_scope']      = (bool)\IPS\Settings::i()->genh_scope;
+		\IPS\Output::i()->jsVars['genh_sizeBuffer'] = (int)\IPS\Settings::i()->genh_sizeBuffer;
+		\IPS\Output::i()->jsVars['genh_minHeight']  = (int)\IPS\Settings::i()->genh_minHeight;
+		\IPS\Output::i()->jsVars['genh_percentage'] = (int)\IPS\Settings::i()->genh_percentage;
+		return parent::manage();
+	}
 }

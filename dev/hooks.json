@@ -1,0 +1,26 @@
+{
+    "Lightbox": {
+        "type": "S",
+        "class": "\\IPS\\Theme\\class_gallery_front_view"
+    },
+    "InjectJsVars": {
+        "type": "C",
+        "class": "\\IPS\\gallery\\modules\\front\\gallery\\view"
+    },
+    "GalleryBrowse": {
+        "type": "C",
+        "class": "\\IPS\\gallery\\modules\\front\\gallery\\browse"
+    },
+    "GalleryImage": {
+        "type": "C",
+        "class": "\\IPS\\gallery\\Image"
+    },
+    "GalleryAlbumTable": {
+        "type": "C",
+        "class": "\\IPS\\gallery\\Album\\Table"
+    },
+    "GalleryImageTable": {
+        "type": "C",
+        "class": "\\IPS\\gallery\\Image\\Table"
+    }
+}
